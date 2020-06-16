@@ -35,13 +35,13 @@ namespace MeagerLisp
             string filename = Path.GetFullPath(
                 Path.Combine(
                     Path.GetDirectoryName(Assembly.GetEntryAssembly().Location),
-                    @".\sympl\test.sympl"
+                    @".\sympl\import.sympl"
                 )
             );
             ////Console.WriteLine("Executing " + filename);
             var feo = engine.ExecuteFile(filename);
             ////Console.WriteLine("ExecuteExpr ... ");
-            engine.Execute("(print 5)", feo);
+            //engine.Execute("(print 5)", feo);
 
             /*
             // Get Python and Ruby engines
@@ -66,9 +66,12 @@ namespace MeagerLisp
             if (args.Length > 0 && args[0] == "norepl") return;
             string input = null;
             string exprstr = "";
-            Console.WriteLine(); Console.WriteLine(); Console.WriteLine();
+            Console.WriteLine("==========================");
+            Console.WriteLine("    Hello, MeagerLisp!");
+            Console.WriteLine("==========================");
+            Console.WriteLine();
             Console.WriteLine("Enter expressions.  Enter blank line to abort input.");
-            Console.WriteLine("Enter 'exit (the symbol) to exit.");
+            Console.WriteLine("Enter (exit) to exit.");
             Console.WriteLine();
             string prompt = ">>> ";
             var s = engine.GetService<Sympl>();

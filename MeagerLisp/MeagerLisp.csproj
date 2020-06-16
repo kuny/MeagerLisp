@@ -64,6 +64,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="sympl\import.sympl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="sympl\indexing.sympl">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
